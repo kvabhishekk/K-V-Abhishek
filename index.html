@@ -41,31 +41,34 @@
             color: white;
         }
 
-        /* Centered main content */
-        main {
-            text-align: center;
-            padding: 2em 0;
+        /* Main container for flex layout */
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 2em;
         }
 
-        /* Profile image styling for full-length display */
+        /* Profile image styling */
         .profile-image {
-            width: 60%;
-            max-width: 400px;
+            width: 300px;
+            max-width: 90%;
             height: auto;
-            margin: 20px 0;
+            margin: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         /* Content styling */
         .content {
-            max-width: 800px;
-            margin: auto;
+            max-width: 500px;
+            margin: 20px;
             padding: 2em;
             background-color: #222;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: justify;
             color: #ccc;
         }
 
@@ -110,6 +113,14 @@
             color: #999;
             background-color: #333;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -120,23 +131,22 @@
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Main Content -->
-    <main>   
-        <p><strong>Namaskar</strong> /ˌnʌmʌsˈkɑː/<br><em>A traditional Indian greeting or gesture of respect</em></p>
-        <img src="profile.jpeg" alt="Profile Image of K V Abhishek" class="profile-image">
-    </main>
-
-    <!-- About Section -->
-    <div class="content">
-        <p>Hello! I'm K V Abhishek, deeply passionate about technology, human-centered design, and the interaction of technology and humanity.</p>
+    <!-- Main Content with Flex Layout -->
+    <div class="container">
+        <img src="profile.jpg" alt="Profile Image of K V Abhishek" class="profile-image">
         
-        <p>My academic journey began at <a href="https://en.wikipedia.org/wiki/SRM_Institute_of_Science_and_Technology" target="_blank">SRM University</a> Kattankulathur, where I earned my B.Tech in engineering. Later, I pursued a Master’s in Business Administration at <a href="https://en.wikipedia.org/wiki/Banaras_Hindu_University" target="_blank">Banaras Hindu University</a>, Varanasi, exploring the various facets of business management and data-driven insights.</p>
-        
-        <p>Currently, I’m engaged in research across Information Systems, Finance, and Technology, leveraging data to drive insights, support decision-making, and address real-world challenges.</p>
+        <div class="content">
+            <p><strong>Namaskar</strong> /ˌnʌmʌsˈkɑː/<br><em>A traditional Indian greeting or gesture of respect</em></p>
+            <p>Hello! I'm K V Abhishek, deeply passionate about technology, human-centered design, and the interaction of technology and humanity.</p>
+            
+            <p>My academic journey began at <a href="https://en.wikipedia.org/wiki/SRM_Institute_of_Science_and_Technology" target="_blank">SRM University</a> Kattankulathur, where I earned my B.Tech in engineering. Later, I pursued a Master’s in Business Administration at <a href="https://en.wikipedia.org/wiki/Banaras_Hindu_University" target="_blank">Banaras Hindu University</a>, Varanasi, exploring the various facets of business management and data-driven insights.</p>
+            
+            <p>Currently, I’m engaged in research across Information Systems, Finance, and Technology, leveraging data to drive insights, support decision-making, and address real-world challenges.</p>
 
-        <p>Looking ahead, I am excited to start my Ph.D. in Information Systems, where I aim to delve deeper into impactful research.</p>
+            <p>Looking ahead, I am excited to start my Ph.D. in Information Systems, where I aim to delve deeper into impactful research.</p>
 
-        <p>Beyond academics, painting is my creative outlet, balancing my tech pursuits with artistic expression. This blend of technology, data, and creativity fuels my commitment to use these skills to contribute positively to humanity.</p>
+            <p>Beyond academics, painting is my creative outlet, balancing my tech pursuits with artistic expression. This blend of technology, data, and creativity fuels my commitment to use these skills to contribute positively to humanity.</p>
+        </div>
     </div>
 
     <!-- Social Media Links -->
